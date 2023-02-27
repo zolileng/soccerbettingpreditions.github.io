@@ -1,0 +1,401 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Zolile Ngidi-->
+<!-- 2019285838-->
+<!-- Personal website-->
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+	<head>
+		
+		<title>Home </title>
+		
+		<style type="text/css">
+			body {background-color:white;text-align:justify}
+			p {color:black}
+			a {color:white;background-color:black;text-decoration:none}
+			a:hover {background-color:red}
+			body {text-align:center; background-image: url('images/background.jpg');background-repeat: no-repeat;background-size:cover}
+			button:hover {color:red}
+  
+		</style>
+		
+		
+	</head>
+	<body>
+		
+			
+			
+			
+				<h1 style="text-align:center;color:white;font-size:50px"> Soccer Betting </br><span style="color:gold">Predictions</span><h1>
+				<div style="padding-left:270px">
+					<div style="background-color:gold;border-style:solid;width:800px;border-color:white">
+						<h1 style="padding-left:350px;color:white;font-size:35px">Will Not<br/>Occur<br/><img src="images/arrow.jpg"></h1>
+						<p style="color:white;font-size:25px"><strong>1.&nbsp</strong><input type="text" id="row1cell1" size="15">&nbsp&nbsp&nbsp<strong>vs</strong>&nbsp&nbsp&nbsp;<input type="text" id="row1cell2" size="15">&nbsp&nbsp&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;&nbsp;&nbsp;
+							<input type="text" id="c1" size="15"  placeholder="Team1/Draw/ Team2">
+						</p>
+						<br/>
+						<p style="color:white;font-size:25px"><strong>2.&nbsp</strong><input type="text" id="row2cell1" size="15">&nbsp&nbsp&nbsp<strong>vs</strong>&nbsp&nbsp&nbsp;<input type="text" id="row2cell2" size="15">&nbsp&nbsp&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;&nbsp;&nbsp;
+							<input type="text" id="c2" size="15"  placeholder="Team1/Draw/ Team2">
+						</p>
+						<br/>
+						<p style="color:white;font-size:25px"><strong>3.&nbsp</strong><input type="text" id="row3cell1" size="15">&nbsp&nbsp&nbsp<strong>vs</strong>&nbsp&nbsp&nbsp;<input type="text" id="row3cell2" size="15">&nbsp&nbsp&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;&nbsp;&nbsp;
+							<input type="text" id="c3"size="15" placeholder="Team1/Draw/ Team2">
+						</p>
+						<br/>
+						<p style="color:white;font-size:25px"><strong>4.&nbsp</strong><input type="text" id="row4cell1"size="15">&nbsp&nbsp&nbsp<strong>vs</strong>&nbsp&nbsp&nbsp;<input type="text" id="row4cell2" size="15">&nbsp&nbsp&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;&nbsp;&nbsp;
+							<input type="text" id="c4" size="15" placeholder="Team1/Draw/ Team2">
+						</p>
+						<br/>
+						<p style="color:white;font-size:25px"><strong>5.&nbsp</strong><input type="text" id="row5cell1" size="15">&nbsp&nbsp&nbsp<strong>vs</strong>&nbsp&nbsp&nbsp;<input type="text" id="row5cell2" size="15">&nbsp&nbsp&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;&nbsp;&nbsp;
+							<input type="text" id="c5" size="15" placeholder="Team1/Draw/ Team2">
+						</p>
+						<br/>
+						<p style="color:white;font-size:25px"><strong>6.&nbsp</strong><input type="text" id="row6cell1" size="15">&nbsp&nbsp&nbsp<strong>vs</strong>&nbsp&nbsp&nbsp;<input type="text" id="row6cell2" size="15">&nbsp&nbsp&nbsp;&nbsp;&nbsp;<strong>:</strong>&nbsp;&nbsp;&nbsp;
+							<input type="text" id="c6" size="15" placeholder="Team1/Draw/ Team2">
+						</p>
+						<br />
+				           
+						 <div><button style="padding:5px 60px;background-color:black;color:white;border-color:white"  onclick="myfunction()">Generate possible outcomes </button><div>
+						<p id= "o"></p>
+					</div>
+				</div>
+		
+		<script>
+			function myfunction(){
+					let x =document.getElementById("row1cell1").value;
+					let z=document.getElementById("row1cell2").value;
+				                          
+				
+					let dx=document.getElementById("c1").value;
+					const occur =[];
+					const array =[];
+					if(x.length>0 && z.length>0 && dx.length>0){
+						array.push(x.toLowerCase());
+						array.push("draw("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						array.push(z.toLowerCase());
+						
+						
+						if(dx.toLowerCase() == "draw"){
+							occur.push(dx.toLowerCase()+"("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						}
+						else{
+							occur.push(dx.toLowerCase());
+						}
+					}
+					
+					x =document.getElementById("row2cell1").value; 
+					z=document.getElementById("row2cell2").value;
+					dx=document.getElementById("c2").value;
+					
+					if(x.length>0 && z.length>0 && dx.length>0){
+						array.push(x.toLowerCase());
+						array.push("draw("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						array.push(z.toLowerCase());
+						
+						
+						if(dx.toLowerCase() == "draw"){
+							occur.push(dx.toLowerCase()+"("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						}
+						else{
+							occur.push(dx.toLowerCase());
+						}
+					}
+					
+					
+					x =document.getElementById("row3cell1").value;
+					z=document.getElementById("row3cell2").value;
+					dx=document.getElementById("c3").value;
+					
+					if(x.length>0 && z.length>0 && dx.length>0){
+						array.push(x.toLowerCase());
+						array.push("draw("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						array.push(z.toLowerCase());
+						
+						
+						if(dx.toLowerCase() == "draw"){
+							occur.push(dx.toLowerCase()+"("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						}
+						else{
+							occur.push(dx.toLowerCase());
+						}
+					}
+					
+					
+					x =document.getElementById("row4cell1").value;
+					z=document.getElementById("row4cell2").value;
+					dx=document.getElementById("c4").value;
+					
+					if(x.length>0 && z.length>0 && dx.length>0){
+						array.push(x.toLowerCase());
+						array.push("draw("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						array.push(z.toLowerCase());
+						
+						
+						if(dx.toLowerCase() == "draw"){
+							occur.push(dx.toLowerCase()+"("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						}
+						else{
+							occur.push(dx.toLowerCase());
+						}
+					}
+					
+					x =document.getElementById("row5cell1").value;
+					z=document.getElementById("row5cell2").value;
+					dx=document.getElementById("c5").value;
+					
+					if(x.length>0 && z.length>0 && dx.length>0){
+						array.push(x.toLowerCase());
+						array.push("draw("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						array.push(z.toLowerCase());
+						
+						
+						if(dx.toLowerCase() == "draw"){
+							occur.push(dx.toLowerCase()+"("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						}
+						else{
+							occur.push(dx.toLowerCase());
+						}
+					}
+					
+					
+					x =document.getElementById("row6cell1").value;
+					z=document.getElementById("row6cell2").value;
+					dx=document.getElementById("c6").value;
+					
+					if(x.length>0 && z.length>0 && dx.length>0){
+						array.push(x.toLowerCase());
+						array.push("draw("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						array.push(z.toLowerCase());
+						
+						
+						if(dx.toLowerCase() == "draw"){
+							occur.push(dx.toLowerCase()+"("+x.toLowerCase()+"&"+z.toLowerCase()+")");
+						}
+						else{
+							occur.push(dx.toLowerCase());
+						}
+					}
+	
+					
+					let uchiha = true;
+					for(let i = 0 ; i < occur.length ; i++){
+						for(let t = 0 ; t < array.length ; t++){
+							if(occur[i] == array[t]){
+							
+									uchiha =false;
+
+							}
+							else{
+								uchiha=true;
+							}
+							
+						}
+						
+					
+					}
+					
+					if(uchiha){
+						
+						 if(array.length>0 && occur.length>0){                                                                                                                                                                                                                                                                                                                                                                                                                                      
+							document.write("ERROR");
+							document.write("<br>");
+							document.write("==============");
+							document.write("<br>");
+							document.write("<br>");
+							var ee=true;
+							for(let t = 0 ; t < 3 ; t++){
+								if(occur[0] != array[t]){
+										ee=true;
+								}
+								else{
+									ee=false;
+									
+								}
+							}
+							if(ee){
+								document.write(occur[0]+" doesn't match any of "+array[1]+" vs "+array[2]+" possible outcomes");
+								document.write(occur[0]!=array[1]);		
+								document.write("<br>");
+							}
+							
+							ee=false;
+							for(let t = 3 ; t < 6 ; t++){
+								if(occur[1] !== array[t]){
+										ee=true;
+								}
+								else{
+									document.write(occur[1]+" doesn't match any of "+array[3]+" vs "+array[5]+" possible outcomes");
+									document.write("<br>");		
+									document.write("<br>");
+								}
+							}
+							if(ee){
+								document.write(occur[1]+" doesn't match any of "+array[3]+" vs "+array[5]+" possible outcomes");
+								document.write("<br>");		
+								document.write("<br>");
+							}
+							
+							ee=true; 
+							for(let t = 6 ; t < 9 ; t++){
+								if(occur[2] !== array[t]){
+										ee=true;
+								}
+								else{
+									ee=false;
+								}
+							}
+							if(ee){
+								document.write(occur[2]+" doesn't match any of "+array[6]+" vs "+array[8]+" possible outcomes");
+								document.write("<br>");		
+								document.write("<br>");
+							}
+							
+							ee=true; 
+							for(let t = 9 ; t < 12 ; t++){
+								if(occur[3] !== array[t]){
+										ee=true;
+								}
+								else{
+									ee=false;
+								}
+							}
+							if(ee){
+								document.write(occur[3]+" doesn't match any of "+array[9]+" vs "+array[11]+" possible outcomes");
+								document.write("<br>");		
+								document.write("<br>");
+							}
+							
+							ee=false;
+							for(let t = 12 ; t < 15 ; t++){
+								if(occur[4] !== array[t]){
+										ee=true ; 
+								}
+								else{
+									ee=false
+								}
+							}
+							if(ee){
+						
+								document.write(occur[4]+" doesn't match any of "+array[12]+" vs "+array[14]+" possible outcomes");
+								document.write("<br>");		
+								document.write("<br>");
+							}
+							
+							ee=false; 
+							for(let t = 15 ; t < 18; t++){
+								if(occur[5] !== array[t]){
+										ee=true; 
+										
+								}
+								else{ 
+									ee=false;
+								} 
+									
+							}
+							if(ee){
+							
+								document.write(occur[5] +"doesn't match any of "+array[15]+" vs "+array[17]+"possible outcomes");
+							}
+						
+						}
+						else{
+							document.write("ERROR");
+							document.write("<br>");
+							document.write("==============");
+							document.write("<br>");
+							document.write("<br>");
+							document.write("Please fill in all the TextBox");
+						}
+				
+					}
+					else{
+						const itachi=[];
+					
+						for(let t = 0 ; t < 3 ; t++){
+							if(occur[0] != array[t]){
+									itachi.push(array[t]);
+								}
+						}
+						for(let t = 3 ; t < 6 ; t++){
+							if(occur[1] != array[t]){
+									itachi.push(array[t]);
+								}
+						}
+						for(let t = 6 ; t < 9 ; t++){
+							if(occur[2] != array[t]){
+									itachi.push(array[t]);
+								}
+						}
+						for(let t = 9 ; t < 12 ; t++){
+							if(occur[3] != array[t]){
+									itachi.push(array[t]);
+								}
+						}
+						for(let t = 12 ; t < 15 ; t++){
+							if(occur[4] != array[t]){
+									itachi.push(array[t]);
+								}
+						}
+						for(let t = 15 ; t < 18; t++){
+							if(occur[5] != array[t]){
+									itachi.push(array[t]);
+								}
+						}
+						if(array.length==18 && occur.length==6){
+						
+							document.write("You will have to spend R64 in total, while placing R1 in each ticket");
+							document.write("<br>");		
+							document.write("<br>");
+							let v=1;
+							
+							
+							for(let w = 0 ; w < 2 ; w++){
+								for(let r = 2 ; r < 4 ; r++){
+									for(let y = 4 ; y < 6 ; y++){
+										for(let p = 6 ; p < 8 ; p++){
+											for(let q = 8 ; q < 10 ; q++){
+												for(let n = 10 ; n < 12; n++){
+													document.write("TICKET "+v);
+													document.write("<br>");		
+													document.write("<br>");	
+													document.write("1. "+itachi[w]);
+													document.write("<br>");
+													document.write("2. "+itachi[r]);
+													document.write("<br>");
+													document.write("3. "+itachi[y]);
+													document.write("<br>");
+													document.write("4. "+itachi[p]);
+													document.write("<br>");
+													document.write("5. "+itachi[q]);
+													document.write("<br>");
+													document.write("6. "+itachi[n]);
+													document.write("<br>");					 
+													document.write("<br>");
+													document.write("========================================")
+													document.write("<br>");		
+													document.write("<br>");	
+													v +=1;
+												
+												}
+											}
+										}
+									}
+								}
+							}
+						
+					}
+					else{
+						document.write("ERROR");
+						document.write("<br>");
+						document.write("==============");
+						document.write("<br>");
+						document.write("<br>");
+						document.write("Please fill in all the TextBox");
+					}
+				}
+			}	
+		</script>
+	</body>
+</html>
